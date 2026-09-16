@@ -1,0 +1,13 @@
+{
+  "name": "@chrisshawyeah/chat-dock",
+  "version": "0.1.0",
+  "description": "A read-only view of one Claude Code session running in cmux, docked beside any page: transcript, one button for the tab, the claude.ai link.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": { ".": "./src/index.ts", "./chat-dock.css": "./src/chat-dock.css" },
+  "files": ["src"],
+  "peerDependencies": { "react": ">=18" },
+  "repository": "github:chrisshawyeah/chat-dock"
+}

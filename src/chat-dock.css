@@ -1,0 +1,27 @@
+/* Themed by the host through these variables; the defaults are the dark "signal" look. */
+.cd { --cd-bg: var(--cd-bg, #14181d); --cd-line: var(--cd-line, #242a31); --cd-ink: var(--cd-ink, #e9e6df); --cd-mut: var(--cd-mut, #9aa2ac); --cd-accent: var(--cd-accent, #f0b65e); --cd-on: var(--cd-on, #54d2c4); --cd-sans: var(--cd-sans, system-ui, sans-serif); --cd-mono: var(--cd-mono, ui-monospace, monospace);
+  display: flex; flex-direction: column; width: 340px; min-width: 340px; height: 100%; background: var(--cd-bg); border-left: 1px solid var(--cd-line); color: var(--cd-ink); font: 14px/1.5 var(--cd-sans); }
+.cd-head { display: flex; align-items: center; gap: 4px; padding: 6px 10px 0 12px; border-bottom: 1px solid var(--cd-line); }
+.cd-tab { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--cd-mut); font: inherit; font-size: 13px; padding: 8px 8px; cursor: pointer; margin-bottom: -1px; }
+.cd-tab[aria-selected="true"] { color: var(--cd-ink); border-bottom-color: var(--cd-accent); }
+.cd-close { margin-left: auto; appearance: none; background: none; border: 0; color: var(--cd-mut); font: inherit; font-size: 16px; cursor: pointer; padding: 4px 6px; }
+.cd-close:hover { color: var(--cd-ink); }
+.cd-body { display: flex; flex-direction: column; flex: 1; min-height: 0; padding: 14px 16px; gap: 10px; }
+.cd-state { display: flex; align-items: center; gap: 8px; color: var(--cd-mut); font-size: 13px; }
+.cd-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cd-line); flex: none; }
+.cd-dot.on { background: var(--cd-on); }
+.cd-actions { display: flex; align-items: center; gap: 12px; }
+.cd-btn { appearance: none; border: 1px solid var(--cd-accent); background: var(--cd-accent); color: #0c0e11; font: inherit; font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 8px; cursor: pointer; }
+.cd-btn:disabled { opacity: .5; cursor: default; }
+.cd-link { color: var(--cd-mut); font-size: 13px; text-decoration: none; }
+.cd-link:hover { color: var(--cd-ink); }
+.cd-err { color: #e8806b; font-size: 12px; }
+.cd-log { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+.cd-turn { padding: 10px 0; border-bottom: 1px solid var(--cd-line); }
+.cd-turn.claude { padding-left: 12px; }
+.cd-who { font: 12px var(--cd-mono); color: var(--cd-mut); margin-bottom: 4px; }
+.cd-text { white-space: pre-wrap; word-break: break-word; }
+.cd-foot { color: var(--cd-mut); font-size: 12px; padding-top: 8px; }
+.cd-empty { color: var(--cd-mut); font-size: 13px; padding: 10px 0; }
+@media (prefers-reduced-motion: no-preference) { .cd-dot.on { animation: cd-pulse 2s ease-out infinite; } }
+@keyframes cd-pulse { 0%, 100% { opacity: 1 } 50% { opacity: .45 } }
