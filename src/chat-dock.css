@@ -1,6 +1,6 @@
-/* Themed by the host through these variables; the defaults are the dark "signal" look. */
-.cd { --cd-bg: var(--cd-bg, #14181d); --cd-line: var(--cd-line, #242a31); --cd-ink: var(--cd-ink, #e9e6df); --cd-mut: var(--cd-mut, #9aa2ac); --cd-accent: var(--cd-accent, #f0b65e); --cd-on: var(--cd-on, #54d2c4); --cd-sans: var(--cd-sans, system-ui, sans-serif); --cd-mono: var(--cd-mono, ui-monospace, monospace);
-  display: flex; flex-direction: column; width: 340px; min-width: 340px; height: 100%; background: var(--cd-bg); border-left: 1px solid var(--cd-line); color: var(--cd-ink); font: 14px/1.5 var(--cd-sans); }
+/* Themed by the host through --cd-* variables set on any ancestor; these are the defaults (the dark "signal" look). */
+:where(.cd) { --cd-bg: #14181d; --cd-line: #242a31; --cd-ink: #e9e6df; --cd-mut: #9aa2ac; --cd-accent: #f0b65e; --cd-on: #54d2c4; --cd-sans: system-ui, sans-serif; --cd-mono: ui-monospace, monospace; }
+.cd { display: flex; flex-direction: column; width: 340px; min-width: 340px; height: 100%; background: var(--cd-bg); border-left: 1px solid var(--cd-line); color: var(--cd-ink); font: 14px/1.5 var(--cd-sans); }
 .cd-head { display: flex; align-items: center; gap: 4px; padding: 6px 10px 0 12px; border-bottom: 1px solid var(--cd-line); }
 .cd-tab { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--cd-mut); font: inherit; font-size: 13px; padding: 8px 8px; cursor: pointer; margin-bottom: -1px; }
 .cd-tab[aria-selected="true"] { color: var(--cd-ink); border-bottom-color: var(--cd-accent); }
